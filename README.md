@@ -89,7 +89,6 @@ Make sure your Unity project contains:
 
 ## 📌 Future Improvements
 
-- Add steering control via `gz` gyro axis.
 - Optimize OLED refresh to avoid flickering.
 - Add graphical bar or warning threshold for odor levels.
 - Integrate PWM motor speed control.
