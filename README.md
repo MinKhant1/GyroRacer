@@ -7,11 +7,13 @@ This project integrates motion sensing, display output, and basic control for a 
 ## 📁 Project Structure
 
 ### Arduino Files
+
 - **`car_controller.ino`** – Main Arduino sketch: handles sensor input, serial commands, and hardware output (LEDs, buzzer, OLED).
 - **MPU6050** – Motion sensor used to track acceleration and rotation.
 - **OLED Display (U8g2)** – Displays odor level via a 128x64 OLED screen connected with Software I2C.
 
 ### Unity Scripts
+
 - **`CarController.cs`** – Handles vehicle movement based on sensor data from the Arduino.
 - **`ArduinoInput.cs`** – Reads serial data from Arduino and sends commands (e.g., "BUZZ", "ODOR:50") back.
 
@@ -31,16 +33,18 @@ This project integrates motion sensing, display output, and basic control for a 
 
 ## 🔌 Pin Configuration
 
-| Component         | Arduino Pin |
-|------------------|-------------|
-| Forward Button    | D7          |
-| Backward Button   | D6          |
-| Brake Button      | D5          |
-| Green LED         | D4          |
-| Red LED           | D3          |
-| Buzzer            | D2          |
-| OLED SDA          | A2          |
-| OLED SCL          | A3          |
+| Component       | Arduino Pin       |
+| --------------- | ----------------- |
+| Forward Button  | D7                |
+| Backward Button | D6                |
+| Brake Button    | D5                |
+| Green LED       | D4                |
+| Red LED         | D3                |
+| Buzzer          | D2                |
+| OLED SDA        | A2                |
+| OLED SCL        | A3                |
+| **MPU6050 SDA** | A4 (default Wire) |
+| **MPU6050 SCL** | A5 (default Wire) |
 
 ---
 
@@ -67,9 +71,9 @@ Install via Arduino Library Manager:
 
 ## 🔄 Serial Commands
 
-| Command        | Description                             |
-|----------------|-----------------------------------------|
-| `BUZZ`         | Triggers buzzer for 200 ms              |
+| Command        | Description                                  |
+| -------------- | -------------------------------------------- |
+| `BUZZ`         | Triggers buzzer for 200 ms                   |
 | `ODOR:<value>` | Displays `<value>` on OLED (e.g., `ODOR:45`) |
 
 ---
